@@ -52,7 +52,7 @@ export default {
         },
         async handleLogin() {
             try {
-                const response = await fetch('http://localhost:5000/api/v1/signin', {
+                const response = await fetch('https://backend-todolist-pxcq.onrender.com/api/v1/signin', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export default {
 
         async handleSignup() {
             try {
-                const response = await fetch('http://localhost:5000/api/v1/register', {
+                const response = await fetch('https://backend-todolist-pxcq.onrender.com/api/v1/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
