@@ -55,7 +55,7 @@ export default {
     methods: {
         async fetchTasks() {
             try {
-                const response = await fetch(`https://backend-todolist-pxcq.onrender.com/api/v2/getTasks/${this.userId}`);
+                const response = await fetch(`http://localhost:5000/api/v2/getTasks/${this.userId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
@@ -73,7 +73,7 @@ export default {
 
         async updateTask() {
             try {
-                const response = await fetch(`https://backend-todolist-pxcq.onrender.com/api/v2/updateTask/${this.editTaskData._id}`, {
+                const response = await fetch(`http://localhost:5000/api/v2/updateTask/${this.editTaskData._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ export default {
 
         async deleteTask(id) {
             try {
-                const response = await fetch(`https://backend-todolist-pxcq.onrender.com/api/v2/deleteTask/${id}`, {
+                const response = await fetch(`http://localhost:5000/api/v2/deleteTask/${id}`, {
                     method: 'DELETE'
                 });
                 if (!response.ok) {
@@ -122,7 +122,7 @@ export default {
 
         async markTaskAsDone(id) {
             try {
-                const response = await fetch(`https://backend-todolist-pxcq.onrender.com/api/v2/markTaskAsDone/${id}`, {
+                const response = await fetch(`http://localhost:5000/api/v2/markTaskAsDone/${id}`, {
                     method: 'PUT'
                 });
                 if (!response.ok) {
