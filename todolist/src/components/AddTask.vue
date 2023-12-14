@@ -47,7 +47,7 @@ export default {
     methods: {
         async addTask() {
             try {
-                const response = await fetch('http://localhost:5000/api/v2/addTask', {
+                const response = await fetch('https://backend-todolist-pxcq.onrender.com/api/v2/addTask', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
